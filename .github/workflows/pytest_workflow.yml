@@ -1,0 +1,27 @@
+name: Python Tests
+
+on:
+  push:
+    branches:
+      - i200634
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x  # Choose your desired Python version
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        working-directory: ./path/to/your/project
+
+      - name: Run tests
+        run: pytest
+        working-directory: ./path/to/your/project
