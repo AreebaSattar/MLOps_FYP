@@ -3,7 +3,7 @@ name: Python Tests
 on:
   push:
     branches:
-      - i200634
+      - main
 
 jobs:
   build:
