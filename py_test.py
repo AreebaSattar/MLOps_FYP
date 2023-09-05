@@ -1,9 +1,5 @@
-from app import add, subtract
+from app import div
 
-def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
-
-def test_subtract():
-    assert subtract(5, 3) == 2
-    assert subtract(1, 2) == -1
+def test_div():
+    assert div(3, 3) == 1
+    assert div(6, 2) == 3
